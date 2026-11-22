@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snake</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="jeu">
+  <header>
+    <h1>Snake</h1>
+    <dl class="scores">
+      <div><dt>Score</dt><dd id="score">0</dd></div>
+      <div><dt>Niveau</dt><dd id="niveau">1</dd></div>
+      <div><dt>Record</dt><dd id="record">0</dd></div>
+    </dl>
+  </header>
+
+  <div class="plateau">
+    <canvas id="canvas" width="480" height="480" aria-label="Plateau de jeu"></canvas>
+    <div class="ecran" id="ecran">
+      <p class="titre" id="ecran-titre">Prêt ?</p>
+      <p id="ecran-texte">Flèches ou ZQSD pour diriger le serpent, Espace pour mettre en pause.</p>
+      <button id="jouer" type="button">Jouer</button>
+    </div>
+  </div>
+
+  <div class="manette" aria-label="Commandes tactiles">
+    <button type="button" data-dir="haut" aria-label="Haut">▲</button>
+    <button type="button" data-dir="gauche" aria-label="Gauche">◀</button>
+    <button type="button" data-dir="bas" aria-label="Bas">▼</button>
+    <button type="button" data-dir="droite" aria-label="Droite">▶</button>
+  </div>
+
+  <label class="option"><input type="checkbox" id="murs" checked> Les murs sont mortels</label>
+</main>
+<script src="snake.js"></script>
+</body>
+</html>
